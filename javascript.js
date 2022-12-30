@@ -1,56 +1,63 @@
 let table = document.getElementById('tableau');
 let recherche = document.getElementById('recherche');
 let request = new XMLHttpRequest();//creer une requette 
-request.open('get',"films.json");//la methode open sert a ouvrir cette requette, elle a 2parametres au stricte minimum "get"=> pour recuperer les donnes
-request.responseType = "json";//en signalant au servuer que on veut une format au type json
-request.send();//envoyer la requette grace a la methode send
-request.onload = function (){
-    var film = request.response;//stocker la reponse grace a la methode response =>on stocke l'objet javascript baser sur json 
-    AfficherFilm(film);
 
-}
+request.responseType = 'json';
+request.open('get',"films.json");//la methode open sert a ouvrir cette requette, elle a 2parametres au stricte minimum "get"=> pour recuperer les donnes
+request.responseType ='text';//en signalant au serveur que on veut une format au type text
+request.send();//envoyer la requette grace a la methode send
+
 //Afficher les films
 function AfficherFilm(jsonObj) {
     let films = jsonObj["Films"];
     for (let i = 0; i < films.length; i++) {
-        let ligne = document.createElement('tr');//creer la ligne
+        //creer la ligne
+        let ligne = document.createElement('tr');
         table.appendChild(ligne);//lier la ligne au table
-        let colonneImg =document.createElement('td');//creer la colonne du poster
-        let lien = document.createElement('a');//creer le lien
+        //creer la colonne du poster
+        let colonneImg =document.createElement('td');
+        //creer le lien
+        let lien = document.createElement('a');
         lien.setAttribute('href',films[i].Image);
-        let img = document.createElement('img');//creer l'image
+        //creer l'image
+        let img = document.createElement('img');
         img.setAttribute('src',films[i].Image);
         img.setAttribute('width',100);
         img.setAttribute('height',150);
         lien.appendChild(img);//lier img au lien
         colonneImg.appendChild(lien);//lier le lien au colonne de l'image
         ligne.appendChild(colonneImg);//lier la colonne d l'image à la ligne
-        let colonneTitre =document.createElement('td');//creer la colonne du titre
+        //creer la colonne du titre
+        let colonneTitre =document.createElement('td');
         colonneTitre.innerHTML = films[i].Titre;
         ligne.appendChild(colonneTitre);
-        let colonneRealisateur =document.createElement('td');//creer la colonne du realisateur
+        //creer la colonne du realisateur
+        let colonneRealisateur =document.createElement('td');
         colonneRealisateur.innerHTML = films[i].Realisateur;
         ligne.appendChild(colonneRealisateur);
-        let colonneDuree =document.createElement('td');//creer la colonne de la durée
+        //creer la colonne de la durée
+        let colonneDuree =document.createElement('td');
         colonneDuree.innerHTML = films[i].Duree;
         ligne.appendChild(colonneDuree);
-        let colonneAP =document.createElement('td');//creer la colonne de l'année de production
+        //creer la colonne de l'année de production
+        let colonneAP =document.createElement('td');
         colonneAP.innerHTML = films[i].anneeProduction;
         ligne.appendChild(colonneAP);
-      
-        let colonneFestivals =document.createElement('td');//creer la Colonne festival
+        //creer la Colonne festival
+        let colonneFestivals =document.createElement('td');
         ligne.appendChild(colonneFestivals);//lier la ColFestival à la ligne
         let festival = films[i].Festivals;
 
-        for (let j = 0; j < festival.length; j++) {//pour lire tout les donnees du tableau
+        for (let j = 0; j < festival.length; j++) {//pour lire tout les donnees du tableau de festival
             let listeF = document.createElement('li');
             listeF.innerHTML = festival[j];
             colonneFestivals.appendChild(listeF);
         } 
-        let colonneActeurs =document.createElement('td');//creer la ColActeurs
+        //creer la ColActeurs
+        let colonneActeurs =document.createElement('td');
         ligne.appendChild(colonneActeurs);//la lier a la ligne 
         let acteur = films[i].Acteurs;
-        for (let k = 0; k < acteur.length; k++) { //lire les donnees de tableau d'objet
+        for (let k = 0; k < acteur.length; k++) { //lire les donnees de tableau d'objet d'acteur
             let listeA = document
             .createElement('li');
             listeA.innerHTML = "Nom: "+acteur[k].Nom;
@@ -65,24 +72,24 @@ function AfficherFilm(jsonObj) {
        
     }
 } 
-request.responseType = 'json';
-request.open('get',"films.json");//important de le redire
-request.responseType ='text'; 
-request.send();
+
 
 request.onload = function (){
-    let filmss = JSON.parse(request.responseText);
+    let filmss = JSON.parse(request.responseText);//ouvrir le texte qui ce trouve dans la requette
     AfficherFilm(filmss);
 }
+
 //Rechercher
 function Rechercher() {
-    var data = JSON.parse(request.responseText);
+    var data = JSON.parse(request.responseText);//ouvrir le texte qui ce trouve dans la requette
     table.innerHTML ="";
     for (let i = 0; i < data.Films.length; i++) {//
         if (data.Films[i].Titre.toLowerCase().includes(recherche.value.toLowerCase())) {
-        let ligne = document.createElement('tr');//creer la ligne
+        //creer la ligne
+        let ligne = document.createElement('tr');
         table.appendChild(ligne);//lier la ligne au table
-        let colonneImg =document.createElement('td');//creer la colonne du poster
+        //creer la colonne du poster
+        let colonneImg =document.createElement('td');
         let lien = document.createElement('a');//creer le lien
         lien.setAttribute('href',data.Films[i].Image);
         let img = document.createElement('img');//creer l'image
@@ -92,32 +99,38 @@ function Rechercher() {
         lien.appendChild(img);//lier img au lien
         colonneImg.appendChild(lien);//lier le lien au colonne de l'image
         ligne.appendChild(colonneImg);//lier la colonne d l'image à la ligne
-        let colonneTitre =document.createElement('td');//creer la colonne du titre
+        //creer la colonne du titre
+        let colonneTitre =document.createElement('td');
         colonneTitre.innerHTML = data.Films[i].Titre;
         ligne.appendChild(colonneTitre);
-        let colonneRealisateur =document.createElement('td');//creer la colonne du realisateur
+        //creer la colonne du realisateur
+        let colonneRealisateur =document.createElement('td');
         colonneRealisateur.innerHTML = data.Films[i].Realisateur;
         ligne.appendChild(colonneRealisateur);
-        let colonneDuree =document.createElement('td');//creer la colonne de la durée
+        //creer la colonne de la durée
+        let colonneDuree =document.createElement('td');
         colonneDuree.innerHTML = data.Films[i].Duree;
         ligne.appendChild(colonneDuree);
-        let colonneAP =document.createElement('td');//creer la colonne de l'année de production
+        //creer la colonne de l'année de production
+        let colonneAP =document.createElement('td');
         colonneAP.innerHTML = data.Films[i].anneeProduction;
         ligne.appendChild(colonneAP);
-      
-        let colonneFestivals =document.createElement('td');//creer la Colonne festival
+        //creer la Colonne festival
+        let colonneFestivals =document.createElement('td');
         ligne.appendChild(colonneFestivals);//lier la ColFestival à la ligne
         let festival = data.Films[i].Festivals;
 
-        for (let j = 0; j < festival.length; j++) {//pour lire tout les donnees du tableau
+        for (let j = 0; j < festival.length; j++) {//pour lire tout les donnees du tableau de festival
+          
             let listeF = document.createElement('li');
             listeF.innerHTML = festival[j];
             colonneFestivals.appendChild(listeF);
         } 
-        let colonneActeurs =document.createElement('td');//creer la ColActeurs
+        //creer la ColActeurs
+        let colonneActeurs =document.createElement('td');
         ligne.appendChild(colonneActeurs);//la lier a la ligne 
         let acteur = data.Films[i].Acteurs;
-        for (let k = 0; k < acteur.length; k++) { //lire les donnees de tableau d'objet
+        for (let k = 0; k < acteur.length; k++) { //lire les donnees de tableau d'objet d'acteur
             let listeA = document
             .createElement('li');
             listeA.innerHTML = "Nom: "+acteur[k].Nom;
