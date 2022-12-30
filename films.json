@@ -1,0 +1,184 @@
+{"Films":
+    [
+        {
+            "Titre": "Le Voyage de Chihiro",
+            "Realisateur": "Hayao Miyazaki",
+            "Duree": "124 min",
+            "anneeProduction": "2001",
+            "Image": "./imgs/Le Voyage de Chihiro.jpeg",
+            "Festivals":["Nouvelles images du Japon"],
+            "Acteurs":[ {
+                "Nom": "Rumi",
+                "Prenom": "Hiiragi",
+                "Nationalite": "Japonaise"
+            },{
+                "Nom": "Irino",
+                "Prenom": "Miyu",
+                "Nationalite": "Japonaise" 
+            },{
+                "Nom": "Natsuki",
+                "Prenom": "Mari",
+                "Nationalite": "Japonaise" 
+            }]
+        },
+        {
+            "Titre": "Princesse Mononoke",
+            "Realisateur": "Hayao Miyazaki",
+            "Duree": "134 min",
+            "anneeProduction": "1997",
+            "Image": "./imgs/Princesse Mononoké.jpg",
+            "Festivals":[],
+            "Acteurs":[ {
+                "Nom": "Yōji",
+                "Prenom": "Matsuda",
+                "Nationalite": "Japonais"
+            }, {
+                "Nom": "Ishida",
+                "Prenom": "Yuriko",
+                "Nationalite": "Japonaise"
+            }]
+        },
+        {
+        "Titre": "Le vent se lève",
+        "Realisateur": "Hayao Miyazaki ",
+        "Duree": "126 min",
+        "anneeProduction": "2013",
+        "Image": "./imgs/Le vent se lève.webp",
+        "Festivals":["festival international de cinema d'animation de Meknès"],
+        "Acteurs":[ {
+            "Nom": "Hideaki",
+            "Prenom": "Anno",
+            "Nationalite": "Japonais"
+        },
+        {
+            "Nom": "Miori",
+            "Prenom": "Takimoto",
+            "Nationalite": "Japonaise"  
+        }]
+        },
+        {
+            "Titre": "L'Éveil d'un champion",
+            "Realisateur": "John Lee Hancock",
+            "Duree": "129 min",
+            "anneeProduction": "2009",
+            "Image": "./imgs/the_blind_side_l_eveil_d_un_champion.webp",
+            "Festivals":[],
+            "Acteurs": [{
+                "Nom": "Bullock",
+                "Prenom": "Sandra",
+                "Nationalite": "Américaine"
+            },{
+                "Nom": "Aaron",
+                "Prenom": "Quinton",
+                "Nationalite": "Américain"
+            }]
+        },
+        {
+            "Titre": "Miss Détective",
+            "Realisateur": "Donald Petrie",
+            "Duree": "109 min",
+            "anneeProduction": "2000",
+            "Image": "./imgs/miss detective.jpg",
+            "Festivals":[],
+            "Acteurs": [{
+                "Nom": "Bullock",
+                "Prenom": "Sandra",
+                "Nationalite": "Américaine"
+            },{
+                "Nom": "Benjamin",
+                "Prenom": "Bratt",
+                "Nationalite": "Américain"
+            }]
+        },{
+            "Titre": "Le Voyage de Chihiro",
+            "Realisateur": "Hayao Miyazaki",
+            "Duree": "124 min",
+            "anneeProduction": "2001",
+            "Image": "./imgs/Le Voyage de Chihiro.jpeg",
+            "Festivals":["Nouvelles images du Japon"],
+            "Acteurs":[ {
+                "Nom": "Rumi",
+                "Prenom": "Hiiragi",
+                "Nationalite": "Japonaise"
+            },{
+                "Nom": "Irino",
+                "Prenom": "Miyu",
+                "Nationalite": "Japonaise" 
+            },{
+                "Nom": "Natsuki",
+                "Prenom": "Mari",
+                "Nationalite": "Japonaise" 
+            }]
+        },
+        {
+            "Titre": "Princesse Mononoke",
+            "Realisateur": "Hayao Miyazaki",
+            "Duree": "134 min",
+            "anneeProduction": "1997",
+            "Image": "./imgs/Princesse Mononoké.jpg",
+            "Festivals":[],
+            "Acteurs":[ {
+                "Nom": "Yōji",
+                "Prenom": "Matsuda",
+                "Nationalite": "Japonais"
+            }, {
+                "Nom": "Ishida",
+                "Prenom": "Yuriko",
+                "Nationalite": "Japonaise"
+            }]
+        },
+        {
+        "Titre": "Le vent se lève",
+        "Realisateur": "Hayao Miyazaki ",
+        "Duree": "126 min",
+        "anneeProduction": "2013",
+        "Image": "./imgs/Le vent se lève.webp",
+        "Festivals":["festival international de cinema d'animation de Meknès"],
+        "Acteurs":[ {
+            "Nom": "Hideaki",
+            "Prenom": "Anno",
+            "Nationalite": "Japonais"
+        },
+        {
+            "Nom": "Miori",
+            "Prenom": "Takimoto",
+            "Nationalite": "Japonaise"  
+        }]
+        },
+        {
+            "Titre": "L'Éveil d'un champion",
+            "Realisateur": "John Lee Hancock",
+            "Duree": "129 min",
+            "anneeProduction": "2009",
+            "Image": "./imgs/the_blind_side_l_eveil_d_un_champion.webp",
+            "Festivals":[],
+            "Acteurs": [{
+                "Nom": "Bullock",
+                "Prenom": "Sandra",
+                "Nationalite": "Américaine"
+            },{
+                "Nom": "Aaron",
+                "Prenom": "Quinton",
+                "Nationalite": "Américain"
+            }]
+        },
+        {
+            "Titre": "Miss Détective",
+            "Realisateur": "Donald Petrie",
+            "Duree": "109 min",
+            "anneeProduction": "2000",
+            "Image": "./imgs/miss detective.jpg",
+            "Festivals":[],
+            "Acteurs": [{
+                "Nom": "Bullock",
+                "Prenom": "Sandra",
+                "Nationalite": "Américaine"
+            },{
+                "Nom": "Benjamin",
+                "Prenom": "Bratt",
+                "Nationalite": "Américain"
+            }]
+        }
+    ]
+}
+
