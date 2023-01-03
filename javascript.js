@@ -3,7 +3,7 @@ let recherche = document.getElementById('recherche');
 let request = new XMLHttpRequest();//creer une requette 
 
 request.responseType = 'json';
-request.open('get',"films.json");//la methode open sert a ouvrir cette requette, elle a 2parametres au stricte minimum "get"=> pour recuperer les donnes
+request.open('get',"./films.json");//la methode open sert a ouvrir cette requette, elle a 2parametres au stricte minimum "get"=> pour recuperer les donnes
 request.responseType ='text';//en signalant au serveur que on veut une format au type text
 request.send();//envoyer la requette grace a la methode send
 
